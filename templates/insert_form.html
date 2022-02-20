@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<form action="/data" method = "POST">
+    <p>Name___: <input type = "text" name = "Name" /></p>
+    <p>City_____: <input type = "text" name = "City" /></p>
+    <p>Country : <input type = "text" name = "Country" /></p>
+    <p><input type = "submit" value = "Submit" /></p>
+</form>
+
+
+
+{% endblock %}
+
+
+<!-- https://python-commandments.org/flask-forms/ -->

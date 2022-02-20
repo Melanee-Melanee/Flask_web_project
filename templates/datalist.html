@@ -1,0 +1,67 @@
+{% include 'navbar2.html' %}
+
+<style id="ss">
+    table, th, td {
+   border: 1px solid black;
+   min-width: 100%;
+   align-items: center;
+ } 
+</style>
+
+
+
+<table id="data" class="table table-striped">
+    <!-- <thead>
+      <tr>
+        <th>Home Page</th>
+        <th>Create New Record</th>
+      </tr>
+    </thead> -->
+    <tbody>
+        <tr>
+          <td>
+            <a href="{{ url_for('homepage') }}"> 
+                Home  
+            </a>
+          </td>
+          <td>
+            <a href="{{ url_for('create') }}"> 
+                Create New Record  
+            </a>
+          </td>
+
+        </tr> 
+    </tbody>
+  </table>
+
+<h1>All Information</h1> 
+
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name and Family</th>
+        <th>Age</th>
+        <th>Address</th>
+        <!-- <th>Phone Number</th>
+        <th>Email</th> -->
+        <th>Show</th>
+        <!-- <th>Delete</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in employees %}
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.age }}</td>
+          <td>{{ user.position }}</td>
+          <td><a href="{{ url_for('RetrieveEmployee', id=user.employee_id) }}" >Show</a></td>
+          <!-- <td><a href="{{ url_for('delete', id=user.employee_id) }}" >Delete</a></td> -->
+        </tr> 
+      {% endfor %}
+    </tbody>
+  </table>
+
+
+  <!-- {% for employee in employees %}
+  <h3>{{employee}}</h3><hr>
+  {% endfor %} -->

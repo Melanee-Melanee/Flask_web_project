@@ -1,0 +1,50 @@
+<!-- <h3>Id</h3> 
+<p>{{employee.employee_id}}</p><hr>
+<h3>Name</h3>
+<p>{{employee.name}}</p><hr>
+<h3>Age</h3>
+<p>{{employee.age}}</p><hr>
+<h3>Position</h3>
+<p>{{employee.position}}</p><hr> -->
+
+{% include 'navbar2.html' %}
+
+<style id="ss">
+    table, th, td {
+   border: 1px solid black;
+   min-width: 100%;
+ } 
+</style>
+
+<h4>
+    <a href="{{ url_for('homepage') }}"> 
+        Home  
+    </a>
+</h4>
+
+
+<h1>Information : </h1>
+<table id="data" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <!-- <th>Phone Number</th> -->
+        <th>Edit</th>
+        <th>Delete</th> 
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>{{employee.name}}</td>
+          <td>{{employee.age}}</td>
+          <td>{{employee.position}}</td>
+          <td><a href="{{ url_for('update', id=employee.employee_id) }}" >Edit</a></td>
+          <td><a href="{{ url_for('delete', id=employee.employee_id) }}" >Delete</a></td>
+        </tr>
+    </tbody>
+  </table>
+
+
+

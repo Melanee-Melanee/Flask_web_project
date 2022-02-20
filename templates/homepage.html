@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home Page
+{% endblock %} 
+
+{% block content %}
+    <h2 style="margin-top: 20px;">Hi Everyone</h2>
+    <h1 style="margin-top: 25px;">This is My First Web Project with Python and Flask</h1>
+    <h6 style="margin-top: 25px;">My latest project in Python training course with flask microframework.</h6>
+    <h6 style="margin-top: 20px;">1400/11/29    -    2022-02-18</h6>
+
+    
+    
+
+    <h5 style="margin-top: 230px;">
+        <a href="{{ url_for('RetrieveList') }}" > 
+            Display All Information 
+        </a>
+    </h5>
+
+    <h6 style="margin-top: 20px;">
+        {{ datetime_ }}
+    </h6>
+{% endblock %}

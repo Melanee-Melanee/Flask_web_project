@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+
+{% block title %}
+home page
+{% endblock %}
+
+{% block content %}
+    <!-- <div class="card"> -->
+        {% for cnt in contact_list %}        
+            <!-- <h5>{{cnt}}</h5> --> 
+            <h5>
+                <a href="{{ url_for('detail', contact_id=cnt.id) }}"> 
+                    {{cnt.phone_number}} 
+                </a>
+            </h5>
+            <small>{{cnt.username}}</small>
+        {% endfor %}
+    <!-- </div> -->
+<!-- <h1>My Name is {{name}}</h1> -->
+
+{% endblock %} 

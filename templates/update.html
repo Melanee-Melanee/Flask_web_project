@@ -1,0 +1,27 @@
+<style id="ss">
+    table, th, td form{
+   border: 1px solid black;
+   min-width: 100%;
+ } 
+    label {
+      display: inline-block;
+      width: 140px;
+      text-align: left;
+ } 
+</style>
+
+<!-- <form action='' method = "POST" style="border:3px; height: 200px; border-style:solid; border-color:#140101; padding: 1em;">
+    <p><label>employee ID</label> <input type = "integer" name = "employee_id" /></p>
+    <p><label>name</label> <input type = "text" name = "name" /></p>
+    <p><label>age</label> <input type = "integer" name = "age" /></p>
+    <p><label>position</label> <input type = "text" name = "position" /></p>
+    <p><input type = "submit" value = "Insert" /></p>
+  </form>
+</p> -->
+
+<form action='' method = "POST" style="border:3px; height: 200px; border-style:solid; border-color:#140101; padding: 1em;">
+    <p><label>name and Family</label> <input type = "text" name = "fullname" value="{{employee.name}}"/></p>
+    <p><label>age</label> <input type = "integer" name = "age"  value="{{employee.age}}"/></p>
+    <p><label>position</label> <input type = "text" name = "position" value="{{employee.position}}"/></p>
+    <p><label></label><input type = "submit" value = "Edit" style="width: 180px; height: 35;" /></p>
+  </form>

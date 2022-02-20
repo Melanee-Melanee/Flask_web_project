@@ -1,0 +1,52 @@
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+<body>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark"> <!-- navbar-dark and bg-dark are for navbar color, navbar expand-sm is used so that all the items are visible till the small screen, doesn't work for small screen -->
+        <div class="container">
+  <a class="navbar-brand" href="#">Navbar</a>
+            
+            <button class="navbar-toggler" data-toggle="collapse" aria-controls="togglebutton" data-target="#togglebutton">  <!-- for nav items to be seen on small screen, add an icon (burger item) using button and put a class in span tag, but still links won't work, so we add data-toggle and data-target element in button tag which uses js library-->
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="togglebutton"> <!--  don't be seen as a list in downside-->
+            <ul class="navbar-nav mr-auto"> <!-- margin left automatically puts items on the left side. -->
+            <li class="nav-item"><a href="navbar.html" class="nav-link" >Home </a></li> <!-- specify nav links for                                   merge in navbar, otherwise they will be visible as a simple blue links. -->
+            <li class="nav-item"><a href="navbar.html" class="nav-link" >About </a></li>
+            <li class="nav-item"><a href="navbar.html" class="nav-link" >Contacts </a></li>
+                <!-- dropdown menu in navbar -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="id_1" data-toggle="dropdown">Dropdown Menu</a>
+                <div class="dropdown-menu" id="id_1">
+                    <a class="dropdown-item" href="https://www.google.co.in">Go to Google</a>
+                    <a class="dropdown-item" href="https://www.youtube.com">Go to Youtube</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="navbar.html">Return to Homepage</a>
+                    
+            <li class="nav-item"><a class="nav-link disabled">Don't touch </a></li>
+                </div>
+                </li>
+            </ul>
+                
+            <form class="form-inline">
+                <input class="form-control mt-2 " type="search" placeholder="Search Here">
+               <button class="btn btn-outline-primary ml-2 mt-2" type="button">Search</button> 
+                </form>
+            </div>
+                
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</body> 
+
+
+
+</html>

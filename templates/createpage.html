@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block tiltle %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+
+
+
+<h4>
+  <a href="{{ url_for('homepage') }}"> 
+      Home  
+  </a>
+</h4>
+
+Insert Form.<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<div class="login">
+
+  <!-- Main Input For Receiving Query to our ML -->
+ <form action="#"method="post">
+     <input type="integer" name="employee_id" placeholder="employee_id" required="required" />
+     <input type="text" name="fullname" placeholder="Name and Family" required="required" />
+     <input type="integer" name="age" placeholder="Age" required="required" />
+     <input type="text" name="position" placeholder="position" required="required" />
+
+     <button type="submit" class="btn btn-primary  btn-large">Insert</button>
+     <a href="#" class="btn btn-primary  btn-large">Cancel</a>
+ </form>
+
+<br>
+<br>
+{{ datetime }}
+
+</div>
+
+
+
+{% endblock %}
